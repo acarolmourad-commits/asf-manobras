@@ -1,61 +1,49 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ASF Manobras — Progressão de manobras de surf passo a passo | ASF</title>
-<meta name="description" content="Trilha de progressão de manobras de surf: do bottom turn ao aéreo, com checklists técnicos por nível. Satélite do app ASF.">
-<link rel="canonical" href="https://acarolmourad-commits.github.io/asf-manobras/">
-<meta name="theme-color" content="#00A8CC">
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebApplication","name":"ASF Manobras","url":"https://acarolmourad-commits.github.io/asf-manobras/","applicationCategory":"SportsApplication","operatingSystem":"Web","inLanguage":"pt-BR","isPartOf":{"@type":"WebSite","name":"ASF — Associação Surf Feminino","url":"https://acarolmourad-commits.github.io/asf-app/"}}
-</script>
-<style>
-:root{--primary:#00A8CC;--dark:#0E2439;--purple:#9B59B6;--bg:#F7FBFC;--gray:#5A6B7A}
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Outfit',system-ui,sans-serif;background:var(--bg);color:var(--dark)}
-nav{position:sticky;top:0;background:#fff;border-bottom:1px solid #E5EEF2;padding:10px 16px;display:flex;gap:14px;flex-wrap:wrap;z-index:10;justify-content:center}
-nav a{color:var(--primary);text-decoration:none;font-weight:700;font-size:13px}
-nav a.on{color:var(--purple)}
-header{background:linear-gradient(135deg,var(--primary),var(--purple));color:#fff;padding:44px 20px 32px;text-align:center}
-header h1{font-size:clamp(22px,5vw,32px);margin:6px 0}
-header .tag{font-size:11px;letter-spacing:2px;text-transform:uppercase;opacity:.9}
-.wrap{max-width:760px;margin:0 auto;padding:24px 16px 60px}
-.trilha{border-left:3px dashed var(--primary);margin-left:14px;padding-left:22px}
-.step{background:#fff;border-radius:14px;padding:16px 18px;margin:0 0 14px;box-shadow:0 2px 10px rgba(14,36,57,.06);position:relative}
-.step::before{content:attr(data-n);position:absolute;left:-32px;top:14px;width:24px;height:24px;border-radius:50%;background:linear-gradient(135deg,var(--primary),var(--purple));color:#fff;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center}
-.step h2{font-size:15.5px;margin-bottom:4px}
-.muted{color:var(--gray);font-size:12.5px}
-.badge{display:inline-block;font-size:11px;font-weight:700;padding:3px 10px;border-radius:999px;margin:6px 6px 0 0;background:#E8F6FA;color:var(--primary);text-decoration:none}
-footer{text-align:center;font-size:12.5px;color:var(--gray);padding:24px;border-top:1px solid #E5EEF2}
-</style>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ASF Manobras — Trilha de Progressão</title>
+<meta name="description" content="Trilha de progressão de manobras do take-off ao tubo, com níveis e progresso salvo. Satélite do app ASF.">
+<style>:root{--p:#00a8cc;--pd:#0e2439;--g:#f4d03f}*{box-sizing:border-box;margin:0}body{font-family:system-ui,sans-serif;background:#f6fbfd;color:var(--pd)}nav{background:var(--pd);padding:9px 12px;display:flex;flex-wrap:wrap;gap:6px}nav a{color:#fff;text-decoration:none;font-size:11px;font-weight:600;padding:4px 8px;border-radius:20px;background:rgba(255,255,255,.08)}nav a.hub{background:var(--g);color:var(--pd)}header{padding:32px 20px;text-align:center;background:linear-gradient(135deg,#00a8cc20,#f4d03f15)}h1{font-size:25px}main{max-width:560px;margin:20px auto;padding:0 16px}.step{display:flex;gap:14px;background:#fff;border-radius:14px;padding:16px;margin-bottom:12px;box-shadow:0 2px 10px rgba(0,0,0,.06);cursor:pointer;transition:transform .15s;align-items:flex-start}.step:hover{transform:translateX(4px)}.step .ic{font-size:26px}.step.done{opacity:.75;border-left:5px solid #27ae60}.step.lock{opacity:.45}.step h3{font-size:15px}.step p{font-size:13px;color:#678;margin-top:2px}.lv{font-size:11px;font-weight:700;padding:2px 8px;border-radius:10px;background:#eef4f6;color:var(--p)}.bar{height:12px;background:#eef4f6;border-radius:99px;overflow:hidden;margin:8px 0 16px}.bar div{height:100%;background:linear-gradient(90deg,var(--p),#9b59b6);transition:width .4s}.muted{color:#678;font-size:13px}footer{text-align:center;padding:26px;font-size:12px;color:#678}</style>
 </head>
 <body>
 <nav>
-<a href="https://acarolmourad-commits.github.io/asf-app/">🏄 ASF App</a>
-<a href="https://acarolmourad-commits.github.io/asf-treino/">🏋️ Treino</a>
-<a class="on" href="https://acarolmourad-commits.github.io/asf-manobras/">⚡ Manobras</a>
-<a href="https://acarolmourad-commits.github.io/asf-glossario/">📖 Glossário</a>
-<a href="https://acarolmourad-commits.github.io/asf-praias/">🏖️ Praias</a>
-<a href="https://acarolmourad-commits.github.io/asf-quiz/">❓ Quiz</a>
+<a class="hub" href="https://acarolmourad-commits.github.io/asf-app/">🏄‍♀️ ASF App</a>
+<a href="https://acarolmourad-commits.github.io/asf-memoria/">🧩</a><a href="https://acarolmourad-commits.github.io/asf-quiz/">🧠</a><a href="https://acarolmourad-commits.github.io/asf-sos/">🆘</a><a href="https://acarolmourad-commits.github.io/asf-leitura/">👁️</a><a href="https://acarolmourad-commits.github.io/asf-mare/">🌙</a><a href="https://acarolmourad-commits.github.io/asf-previsao/">🌊</a><a href="https://acarolmourad-commits.github.io/asf-praias/">🏖️</a><a href="https://acarolmourad-commits.github.io/asf-treino/">💪</a><a href="https://acarolmourad-commits.github.io/asf-popup/">⏱️</a><a href="https://acarolmourad-commits.github.io/asf-desafio/">🗓️</a><a href="https://acarolmourad-commits.github.io/asf-eventos/">📅</a><a href="https://acarolmourad-commits.github.io/asf-glossario/">📖</a><a href="https://acarolmourad-commits.github.io/asf-comunidade/">💜</a><a href="https://acarolmourad-commits.github.io/asf-seguranca/">🛟</a><a href="https://acarolmourad-commits.github.io/asf-bemestar/">🧘</a><a href="https://acarolmourad-commits.github.io/asf-equipamento/">🏄</a><a href="https://acarolmourad-commits.github.io/asf-nutricao/">🥑</a><a href="https://acarolmourad-commits.github.io/asf-viagens/">✈️</a><a href="https://acarolmourad-commits.github.io/asf-historia/">📜</a><a href="https://acarolmourad-commits.github.io/asf-diario/">📓</a><a href="https://acarolmourad-commits.github.io/asf-respira/">🫁</a><a href="https://acarolmourad-commits.github.io/asf-volume/">📐</a>
 </nav>
-<header>
-<div class="tag">ASF · Manobras</div>
-<h1>Trilha de progressão</h1>
-<p>Do primeiro drop ao primeiro tubo — uma manobra de cada vez.</p>
-</header>
-<main class="wrap">
-<div class="trilha">
-<div class="step" data-n="1"><h2>Take-off consistente</h2><div class="muted">Base de tudo: 9 de cada 10 ondas em pé antes de avançar.</div><a class="badge" href="https://acarolmourad-commits.github.io/asf-treino/">treinar pop-up 🏋️</a></div>
-<div class="step" data-n="2"><h2>Bottom turn</h2><div class="muted">A curva na base que gera velocidade. Olhe para onde quer ir.</div></div>
-<div class="step" data-n="3"><h2>Cutback</h2><div class="muted">Voltar à parte gorda da onda sem perder velocidade.</div></div>
-<div class="step" data-n="4"><h2>Floater</h2><div class="muted">Flutuar por cima do lábio quando a onda fecha à frente.</div></div>
-<div class="step" data-n="5"><h2>Top turn</h2><div class="muted">Batida no lábio com retorno — a manobra mais bonita do surf.</div></div>
-<div class="step" data-n="6"><h2>Tubo</h2><div class="muted">O sonho. Leitura de parede + linha alta + comprometimento.</div><a class="badge" href="https://acarolmourad-commits.github.io/asf-seguranca/">segurança primeiro 🛟</a></div>
-</div>
-<p class="muted" style="margin-top:16px">Termos da trilha no <a href="https://acarolmourad-commits.github.io/asf-glossario/" style="color:var(--primary)">ASF Glossário</a> · teste-se no <a href="https://acarolmourad-commits.github.io/asf-quiz/" style="color:var(--primary)">ASF Quiz</a>.</p>
+<header><h1>🤸 ASF Manobras</h1><p class="muted">A trilha do take-off ao tubo — toque para marcar como dominada</p></header>
+<main>
+<p class="muted">Nível da trilha: <b id="pct">0%</b> • Manobras dominadas: <b id="n">0</b>/8</p>
+<div class="bar"><div id="bar" style="width:0%"></div></div>
+<div id="lista"></div>
+<p class="muted" style="margin-top:14px">Registre cada conquista no <a href="https://acarolmourad-commits.github.io/asf-diario/">ASF Diário</a> e treine a base no <a href="https://acarolmourad-commits.github.io/asf-popup/">Pop-up Trainer</a> e no <a href="https://acarolmourad-commits.github.io/asf-treino/">ASF Treino</a>.</p>
 </main>
-<footer>🌊 ASF — Associação Surf Feminino · <a href="https://acarolmourad-commits.github.io/" style="color:var(--primary)">Hub de apps</a> · <a href="https://acarolmourad-commits.github.io/asf-app/" style="color:var(--primary)">App principal</a></footer>
+<footer>Parte da constelação ASF • <a href="https://acarolmourad-commits.github.io/asf-app/">Voltar ao app principal</a></footer>
+<script>
+const TRILHA=[
+['🏄‍♀️','Take-off','Levantar e ficar em pé com consistência na espuma','base'],
+['🧭','Direção na espuma','Ir para esquerda e direita na onda já quebrada','base'],
+['🦆','Mergulho pato','Furar ondas quebrando sem perder a prancha','base'],
+['🌊','Onda verde (drop)','Pegar a onda antes de quebrar e descer a parede','intermediário'],
+['↩️','Bottom turn','Curva na base da onda — a mãe de todas as manobras','intermediário'],
+['✂️','Cutback','Voltar para a força da onda com estilo','intermediário'],
+['⚡','Floater','Passar por cima do lábio da seção que quebra','avançado'],
+['🌀','Tubo','Entrar no cilindro e sair. O sonho. 🏆','avançado']];
+const K='asf-manobras';let done=JSON.parse(localStorage.getItem(K)||'[]');
+const lista=document.getElementById('lista');
+function render(){
+ lista.innerHTML='';
+ TRILHA.forEach(([ic,nome,desc,nv],i)=>{
+  const locked=i>0&&!done.includes(i-1);
+  const d=document.createElement('div');d.className='step'+(done.includes(i)?' done':'')+(locked?' lock':'');
+  d.innerHTML='<span class="ic">'+(done.includes(i)?'✅':locked?'🔒':ic)+'</span><div><h3>'+nome+' <span class="lv">'+nv+'</span></h3><p>'+(locked?'Domine a manobra anterior para desbloquear':desc)+'</p></div>';
+  if(!locked)d.onclick=()=>{done=done.includes(i)?done.filter(x=>x!==i):[...done,i];localStorage.setItem(K,JSON.stringify(done));render()};
+  lista.appendChild(d);
+ });
+ const p=Math.round(done.length/TRILHA.length*100);
+ document.getElementById('bar').style.width=p+'%';document.getElementById('pct').textContent=p+'%';document.getElementById('n').textContent=done.length;
+}
+render();
+</script>
 </body>
 </html>
