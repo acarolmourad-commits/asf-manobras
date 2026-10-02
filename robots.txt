@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://acarolmourad-commits.github.io/asf-manobras/sitemap.xml
+Sitemap: https://manobras.asf.surf/sitemap.xml
