@@ -1,0 +1,17 @@
+name: add-cutback-guide (one-shot)
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/add_cutback_guide.py
+      - run: |
+          git config user.name "asf-bot"
+          git config user.email "asf.surffeminino@gmail.com"
+          git add index.html
+          git diff --cached --quiet || git commit -m "feat: guia completo do cutback unificado no ASF Manobras"
+          git push
