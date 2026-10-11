@@ -1,0 +1,44 @@
+name: ASF Manobras optional English
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: asf-manobras-i18n
+  cancel-in-progress: false
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/checkout@v4
+        with:
+          repository: acarolmourad-commits/asf-app
+          ref: bc474a6e47e1f87c2bc7bb7a6ba2ec91ae9f9dff
+          path: .shared-i18n
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Check pinned shared engine and build local translation module
+        run: |
+          test "$(git hash-object .shared-i18n/js/asf-i18n.js)" = '1cf83ec77c168734de7011cc7627e750bd919297'
+          python3 scripts/build-i18n.py
+          node --check i18n.js
+      - name: Test complete learning coverage, explicit choice and preserved XP
+        run: |
+          npm install --prefix /tmp/asf-manobras-tests jsdom@24 --no-audit --no-fund
+          NODE_PATH=/tmp/asf-manobras-tests/node_modules node --test tests/i18n.test.cjs
+      - name: Publish only when all tests pass
+        run: |
+          git config user.name 'ASF Bot'
+          git config user.email 'bot@asf-app.com'
+          git add index.html i18n.js
+          if ! git diff --cached --quiet; then
+            git commit -m 'feat(manobras): publish optional English guide, checklist and training focuses'
+            git push origin HEAD:main
+          fi
+          echo "Published source commit: $(git rev-parse HEAD)"
