@@ -21,8 +21,8 @@ CARD = """
 \u274c Girar so com os pes (use o corpo inteiro!)<br>
 \u274c Fazer na parte errada da onda (muito baixo)<br>
 \u274c Desistir no meio da manobra</p>
-<p><b>\ud83c\udfaf Exercicio no seco:</b> pratique a rotacao de ombros em casa. Deixe o skate te ajudar \u2014 faca carvebacks no skate para treinar o movimento!</p>
-<p style="font-size:.85rem;color:#777">Complete o checklist da trilha abaixo para ganhar XP quando dominar o cutback! \ud83d\udcaa</p>
+<p><b>\U0001F3AF Exercicio no seco:</b> pratique a rotacao de ombros em casa. Deixe o skate te ajudar \u2014 faca carvebacks no skate para treinar o movimento!</p>
+<p style="font-size:.85rem;color:#777">Complete o checklist da trilha abaixo para ganhar XP quando dominar o cutback! \U0001F4AA</p>
 </div>
 """
 
