@@ -1,0 +1,18 @@
+name: fix-cutback-anchor-one-shot
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          sed -i 's/id="cutback"/id="guia-cutback-completo"/' index.html
+          grep -c 'id="guia-cutback-completo"' index.html
+          git config user.name "acarolmourad-commits"
+          git config user.email "acarol.mourad@gmail.com"
+          git add index.html
+          git commit -m "fix: âncora do card cutback = guia-cutback-completo (alinhada ao link da home)"
+          git push
